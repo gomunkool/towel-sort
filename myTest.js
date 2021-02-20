@@ -1,13 +1,18 @@
 function towelSort(matrix) {
-    for (let i = 1; i < matrix.length; i = i + 2) {
-        matrix[i].reverse();
-    }
+    if (matrix.length === 0) {
+        let empty = [];
+        return empty;
+    } else {
+        for (let i = 1; i < matrix.length; i = i + 2) {
+            matrix[i].reverse();
+        }
 
-    let res = [];
-    for (let y = 0; y < matrix.length; y++) {
-        res = res.concat(matrix[y]);
+        let res = [];
+        for (let y = 0; y < matrix.length; y++) {
+            res = res.concat(matrix[y]);
+        }
+        return res;
     }
-    return res;
 }
 
 let matrix = [
