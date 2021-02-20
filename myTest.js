@@ -1,6 +1,4 @@
-// You should implement your task here.
-
-module.exports = function towelSort(matrix) {
+function towelSort(matrix) {
     for (let i = 1; i < matrix.length; i = i + 2) {
         matrix[i].reverse();
     }
@@ -10,4 +8,12 @@ module.exports = function towelSort(matrix) {
         res = res.concat(matrix[y]);
     }
     return res;
-};
+}
+
+let matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+    [13, 14, 15, 16],
+];
+console.log(towelSort(matrix));
