@@ -1,7 +1,7 @@
 // You should implement your task here.
 
 module.exports = function towelSort(matrix) {
-    if (matrix.length > 0) {
+    if (matrix && matrix.length) {
         for (let i = 1; i < matrix.length; i = i + 2) {
             matrix[i].reverse();
         }
@@ -11,8 +11,6 @@ module.exports = function towelSort(matrix) {
             res = res.concat(matrix[y]);
         }
         return res;
-    } else {
-        let empty = [];
-        return empty;
     }
+    return [];
 };
